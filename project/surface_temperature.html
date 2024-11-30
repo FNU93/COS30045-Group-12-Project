@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surface Temperature Change Visualization</title>
+    <link rel="stylesheet" href="/assets/css/visualization2.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Annual Surface Temperature Change Visualization</h1>
+        <p>Interactive visualization of annual surface temperature changes from 1961 to 2023.</p>
+    </header>
+    <main>
+        <div id="controls">
+            <label for="COS30045-slider">Year:</label>
+            <input id="COS30045-slider" type="range" min="1961" max="2023" value="1961" step="1">
+            <span id="COS30045-year-label">1961</span>
+            <button id="COS30045-play-button">Play</button>
+        </div>
+        <div id="chart-container">
+            <div id="COS30045-map-container"></div>
+        </div>
+    </main>
+<footer>
+    <p>© 2024 Visualization Project</p>
+    <p>Acknowledgements to <a href="https://www.oecd.org/">OECD</a>, <a href="https://www.imf.org/">IMF</a>, <a
+            href="https://dataforgood.facebook.com/">Meta</a> & <a href="https://climatecommunication.yale.edu/">Yale
+            University</a> for the data, and <a href="https://d3js.org/">D3.js</a>.</p>
+</footer>
+    <script src="/assets/js/visualization2.js"></script>
+</body>
+
+</html>

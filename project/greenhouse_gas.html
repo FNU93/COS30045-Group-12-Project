@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Greenhouse Gas Emissions Visualization</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/vis1.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Greenhouse Gas Emissions Visualization</h1>
+        <p>Explore greenhouse gas emissions data by country, pollutant, and year.</p>
+    </header>
+    <main>
+        <div id="controls">
+            <label for="country-filter">Country:</label>
+            <select id="country-filter">
+                <option value="">All Countries</option>
+            </select>
+
+            <label for="pollutant-filter">Pollutant:</label>
+            <select id="pollutant-filter"></select>
+
+            <label for="year-slider">Year:</label>
+            <input type="range" id="year-slider">
+            <span id="year-label"></span>
+        </div>
+        <div id="map-container">
+            <div id="map-svg"></div>
+            <div id="zoom-buttons">
+                <button id="zoom-in">Zoom In</button>
+                <button id="zoom-out">Zoom Out</button>
+            </div>
+            <div id="legend-container"></div>
+        </div>
+        <div id="side-window">
+            <h4 id="side-window-title">Country Emissions Over Time</h4>
+            <svg id="chart-svg"></svg>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Visualization Project</p>
+        <p>Acknowledgements to <a href="https://www.oecd.org/">OECD</a>, <a href="https://www.imf.org/">IMF</a>, <a
+                href="https://dataforgood.facebook.com/">Meta</a> & <a href="https://climatecommunication.yale.edu/">Yale
+                University</a> for the data, and <a href="https://d3js.org/">D3.js</a>.</p>
+    </footer>
+    <script src="/assets/js/visualization1.js"></script>
+</body>
+
+</html>
