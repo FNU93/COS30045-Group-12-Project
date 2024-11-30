@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Greenhouse Gas Emissions Visualization</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/vis1.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Greenhouse Gas Emissions Visualization</h1>
+            <p>Explore greenhouse gas emissions data by country, pollutant, and year.</p>
+        </div>
+        <button id="drawer-button">☰ Menu</button>
+    </header>
+
+    <nav id="drawer">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="greenhouse_gas.html">Greenhouse Gas Emissions</a></li>
+            <li><a href="surface_temperature.html">Surface Temperature</a></li>
+            <li><a href="climate_survey.html">Climate Survey</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="controls">
+            <label for="country-filter">Country:</label>
+            <select id="country-filter">
+                <option value="">All Countries</option>
+            </select>
+
+            <label for="pollutant-filter">Pollutant:</label>
+            <select id="pollutant-filter"></select>
+
+            <label for="year-slider">Year:</label>
+            <input type="range" id="year-slider">
+            <span id="year-label"></span>
+        </div>
+        <div id="map-container">
+            <div id="map-svg"></div>
+            <div id="zoom-buttons">
+                <button id="zoom-in">Zoom In</button>
+                <button id="zoom-out">Zoom Out</button>
+            </div>
+            <div id="legend-container"></div>
+        </div>
+        <div id="side-window">
+            <h4 id="side-window-title">Country Emissions Over Time</h4>
+            <svg id="chart-svg"></svg>
+        </div>
+    </main>
+
+
+    <section id="visualization2-description">
+        <div class="description-container">
+            <h2>About the Visualization</h2>
+            <p>
+                The data in this visualization comes from the <strong><a href="https://www.oecd-ilibrary.org/environment/data/oecd-environment-statistics_env-data-en">OECD Greenhouse Gases Dataset</a></strong>, which provides
+                information about greenhouse gas emissions from different countries over time.
+            </p>
+            <p>
+                <strong>What the Visualization Represents:</strong> This chart shows how greenhouse gas emissions vary
+                across countries and years. Each country is represented on the map, with the intensity of the color
+                indicating the level of emissions.
+            </p>
+            <p>
+                <strong>How to Use the Visualization:</strong>
+            <ul>
+                <li><strong>Click on a Country:</strong> Select a country on the map to view its emission trends over the
+                    years.</li>
+                <li><strong>Use the Dropdown Filters:</strong> Choose a specific country or type of pollutant from the
+                    filters above the map.</li>
+                <li><strong>Adjust the Year Slider:</strong> Move the slider to change the year and see how emissions have
+                    evolved.</li>
+            </ul>
+            </p>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>© 2024 Visualization Project</p>
+        <p>Acknowledgements to <a href="https://www.oecd.org/">OECD</a>, <a href="https://www.imf.org/">IMF</a>, <a
+                href="https://dataforgood.facebook.com/">Meta</a> & <a href="https://climatecommunication.yale.edu/">Yale
+                University</a> for the data, and <a href="https://d3js.org/">D3.js</a>.</p>
+    </footer>
+    <script src="/assets/js/visualization1.js"></script>
+</body>
+
+</html>

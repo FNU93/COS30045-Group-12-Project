@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surface Temperature Change Visualization</title>
+    <link rel="stylesheet" href="/assets/css/visualization2.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Annual Surface Temperature Change Visualization</h1>
+            <p>Interactive visualization of annual surface temperature changes from 1961 to 2023.</p>
+        </div>
+        <button id="drawer-button">☰ Menu</button>
+    </header>
+
+    <nav id="drawer">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="greenhouse_gas.html">Greenhouse Gas Emissions</a></li>
+            <li><a href="surface_temperature.html">Surface Temperature</a></li>
+            <li><a href="climate_survey.html">Climate Survey</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="controls">
+            <label for="COS30045-slider">Year:</label>
+            <input id="COS30045-slider" type="range" min="1961" max="2023" value="1961" step="1">
+            <span id="COS30045-year-label">1961</span>
+            <button id="COS30045-play-button">Play</button>
+        </div>
+        <div id="chart-container">
+            <div id="COS30045-map-container"></div>
+        </div>
+    </main>
+
+    <section id="visualization-temperature-description">
+        <div class="description-container">
+            <h2>About the Visualization</h2>
+            <p>
+                This interactive visualization showcases <strong>Annual Surface Temperature Changes</strong> across
+                different countries from 1961 to 2023.
+            </p>
+            <p>
+                <strong>What the Visualization Represents:</strong> The map highlights annual temperature variations for
+                countries around the globe. Countries with no available temperature data are marked as "N/A."
+            </p>
+            <p>
+                <strong>How to Use the Visualization:</strong>
+            <ul>
+                <li><strong>Hover Over a Country:</strong> Move your mouse over a country to view its surface temperature
+                    changes.</li>
+                <li><strong>Adjust the Year Slider:</strong> Use the slider below the map to select a year and explore
+                    temperature changes for that specific year.</li>
+            </ul>
+            </p>
+        </div>
+    </section>
+
+
+
+<footer>
+    <p>© 2024 Visualization Project</p>
+    <p>Acknowledgements to <a href="https://www.oecd.org/">OECD</a>, <a href="https://www.imf.org/">IMF</a>, <a
+            href="https://dataforgood.facebook.com/">Meta</a> & <a href="https://climatecommunication.yale.edu/">Yale
+            University</a> for the data, and <a href="https://d3js.org/">D3.js</a>.</p>
+</footer>
+    <script src="/assets/js/visualization2.js"></script>
+</body>
+
+</html>
